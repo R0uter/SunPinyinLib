@@ -27,8 +27,35 @@
 @property  BOOL iou2iu;
 @property  BOOL uei2ui;
 
+/**
+ 从 buffer 获取拼音切分串
+ 
+ @param  buffer 连续不带分隔的拼音串
+ @return 切分好的拼音数组
+ */
+- (NSArray<NSString*>*) pyStringFrom:(NSString*)  buffer ;
 
-- (NSString*) candidateWithBuffer: (NSString*) buffer;
+/**
+ 懒人模式，直接用拼音换整句，每次都是全新的
+ 
+ @param buffer 连续不带分隔的拼音串
+ @return 计算好的中文字符串x1
+ */
+- (NSString*) candidateWithBuffer: (NSString*) buffer ;
+
+/**
+ 步进输入一个或多个字符，带缓存,输入新字符串记得先清空
+ 
+ @param buffer 一个或多个字符
+ */
+- (void) insertWithChar: (NSString*) buffer ;
+
+/**
+ 获取当前buffer生成的整句，不清空buffer方便后续增减
+ 
+ @return 当前buffer生成的整句
+ */
+- (NSString*) currentCandidate ;
 
 - (void) clearBuffer ;
 

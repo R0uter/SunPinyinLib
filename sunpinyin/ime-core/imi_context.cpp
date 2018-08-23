@@ -146,10 +146,8 @@ bool
 CIMIContext::buildLattice(IPySegmentor *segmentor, bool doSearch)
 {
     m_pPySegmentor = segmentor;
-//    return _buildLattice(segmentor->getSegments(),
-//                         segmentor->updatedFrom() + 1, doSearch);
     return _buildLattice(segmentor->getSegments(),
-                          1, doSearch);
+                         segmentor->updatedFrom() + 1, doSearch);
 }
 
 bool

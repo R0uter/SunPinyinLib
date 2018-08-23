@@ -17,11 +17,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
   
-        let d = Date()
+        
         pyWrapper.en2eng = true;
-        let s = pyWrapper.candidate(withBuffer: "huangshangwojiushidangniandaminghupandexiayuheya")
-        print(s!)
-        print(Date().timeIntervalSince(d)*1000,"ms")
+        let s = "huangshangwojiushidangniandaminghupandexiayuheya"
+        for c in s {
+            let d = Date()
+            pyWrapper.insert(withChar: String(c))
+            let result = pyWrapper.currentCandidate()
+            print(result)
+            print(Date().timeIntervalSince(d)*1000,"ms")
+        }
+        
+        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

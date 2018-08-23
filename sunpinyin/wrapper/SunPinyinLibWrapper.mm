@@ -130,31 +130,67 @@ CCandidates candidates;
  //nr -> ne ?
     quanpin_policy.setAutoCorrectionPairs(correcting_pairs);
 }
-//- (void) insertBuffer:(NSString*)str {
-////    for (int i = 0; i < [str lengthOfBytesUsingEncoding:NSASCIIStringEncoding]; i++) {
-////        char c = [str cStringUsingEncoding:NSASCIIStringEncoding][i];
-////        _pySegmentor->push(c);
-////    }
-//    std::string s = [str cStringUsingEncoding:NSASCIIStringEncoding];
-//    std::string::const_iterator it = s.begin();
-//    for (; it != s.end(); ++it) {
-//        _pySegmentor->push(*it & 0x7f);
-//    }
-////    IPySegmentor::TSegmentVec v = _pySegmentor->getSegments();
-////    for (int i = 0; i < v.size(); i++) {
-////        std::cout << CPinyinData::decodeSyllable(v[i].m_syllables[0]) << "'";
-////    }
-////    std::cout << "\n";
-//
-//
-//}
+
+
+/**
+ 从 buffer 获取拼音切分串
+
+ @param  buffer 连续不带分隔的拼音串
+ @return 切分好的拼音数组
+ */
+- (NSArray<NSString*>*) pyStringFrom:(NSString*)  buffer {
+    NSMutableArray * list = [NSMutableArray alloc];
+    IPySegmentor::TSegmentVec v = _pySegmentor->getSegments();
+    for (int i = 0; i < v.size(); i++) {
+        std::string s = CPinyinData::decodeSyllable(v[i].m_syllables[0]);
+        [list addObject:[NSString stringWithUTF8String:s.c_str()]];
+    }
+    return list;
+}
+
+/**
+ 懒人模式，直接用拼音换整句，每次都是全新的
+
+ @param buffer 连续不带分隔的拼音串
+ @return 计算好的中文字符串x1
+ */
 - (NSString*) candidateWithBuffer: (NSString*) buffer {
     //将buffer输入给 segmentor
+    [self clearBuffer];
     std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
-    std::string::const_iterator it = s.begin();
-    for (; it != s.end(); ++it) {
-        _pySegmentor->push(*it & 0x7f);
+    for (int i = (int)s.length(); i >= 0; i--) {
+        _pySegmentor->insertAt(0, s[i-1]);
     }
+
+    NSString *string = [self currentCandidate];
+    _context->clear();
+    return string;
+
+}
+
+
+
+/**
+ 步进输入一个或多个字符，带缓存,输入新字符串记得先清空
+
+ @param buffer 一个或多个字符
+ */
+- (void) insertWithChar: (NSString*) buffer {
+    std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
+        std::string::const_iterator it = s.begin();
+        for (; it != s.end(); ++it) {
+            _pySegmentor->push(*it & 0x7f);
+            _context->buildLattice(_pySegmentor,false);
+        }
+}
+
+
+/**
+ 获取当前buffer生成的整句，不清空buffer方便后续增减
+
+ @return 当前buffer生成的整句
+ */
+- (NSString*) currentCandidate {
     //根据切分好的拼音段来查询模型
     _context->buildLattice(_pySegmentor,true);
     //获取最佳候选
@@ -163,9 +199,7 @@ CCandidates candidates;
     //转换成字符串返回
     size_t len = result.length() * sizeof(TWCHAR);
     NSString *string = [[NSString alloc] initWithBytes:result.c_str() length:len encoding:UTF32Encoding];
-    _context->clear();
     return string;
-
 }
 - (void) clearBuffer {
     _pySegmentor->clear();
@@ -173,6 +207,7 @@ CCandidates candidates;
 
 - (void) backwardBuffer {
     _pySegmentor->pop();
+    _context->buildLattice(_pySegmentor,false);
 }
 
 - (void) test {
