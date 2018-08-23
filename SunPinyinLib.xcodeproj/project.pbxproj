@@ -1,0 +1,1165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E91FEA1D212D5D1C006C60D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA1C212D5D1C006C60D5 /* AppDelegate.swift */; };
+		E91FEA1F212D5D1D006C60D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91FEA1E212D5D1D006C60D5 /* Assets.xcassets */; };
+		E91FEA22212D5D1D006C60D5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91FEA20212D5D1D006C60D5 /* MainMenu.xib */; };
+		E97C79C0212EFEEE000B8F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C79BF212EFEEE000B8F41 /* AppDelegate.swift */; };
+		E97C79C2212EFEEE000B8F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C79C1212EFEEE000B8F41 /* ViewController.swift */; };
+		E97C79C5212EFEEE000B8F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97C79C3212EFEEE000B8F41 /* Main.storyboard */; };
+		E97C79C7212EFEEE000B8F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97C79C6212EFEEE000B8F41 /* Assets.xcassets */; };
+		E97C79CA212EFEEE000B8F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97C79C8212EFEEE000B8F41 /* LaunchScreen.storyboard */; };
+		E97C7A62212F06AD000B8F41 /* SunPinyinLib_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E97C7A60212F06AD000B8F41 /* SunPinyinLib_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E97C7A6A212F06F0000B8F41 /* SunPinyinLibWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA52212D5EF6006C60D5 /* SunPinyinLibWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E97C7A6B212F06F0000B8F41 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C5212D5C9E006C60D5 /* config.h */; };
+		E97C7A6C212F06F0000B8F41 /* imi_option_event.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA69212D6E9F006C60D5 /* imi_option_event.h */; };
+		E97C7A6D212F06F0000B8F41 /* imi_keys.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA68212D6E69006C60D5 /* imi_keys.h */; };
+		E97C7A6E212F06F0000B8F41 /* imi_option_keys.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA67212D6E5E006C60D5 /* imi_option_keys.h */; };
+		E97C7A6F212F06F0000B8F41 /* imi_options.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA65212D6E17006C60D5 /* imi_options.h */; };
+		E97C7A70212F06F0000B8F41 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9B8212D5C9E006C60D5 /* utils.h */; };
+		E97C7A71212F06F0000B8F41 /* lattice_states.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BC212D5C9E006C60D5 /* lattice_states.h */; };
+		E97C7A72212F06F0000B8F41 /* ic_history.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BB212D5C9E006C60D5 /* ic_history.h */; };
+		E97C7A73212F06F0000B8F41 /* imi_funcobjs.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BD212D5C9E006C60D5 /* imi_funcobjs.h */; };
+		E97C7A74212F06F0000B8F41 /* userdict.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BF212D5C9E006C60D5 /* userdict.h */; };
+		E97C7A75212F06F0000B8F41 /* imi_context.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C0212D5C9E006C60D5 /* imi_context.h */; };
+		E97C7A76212F06F0000B8F41 /* imi_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C1212D5C9E006C60D5 /* imi_defines.h */; };
+		E97C7A77212F06F0000B8F41 /* imi_data.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9B7212D5C9E006C60D5 /* imi_data.h */; };
+		E97C7A78212F06F0000B8F41 /* pytrie.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9D6212D5C9E006C60D5 /* pytrie.h */; };
+		E97C7A79212F06F0000B8F41 /* hunpin_seg.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA72212D6F61006C60D5 /* hunpin_seg.h */; };
+		E97C7A7A212F06F0000B8F41 /* shuangpin_data.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA6C212D6EC0006C60D5 /* shuangpin_data.h */; };
+		E97C7A7B212F06F0000B8F41 /* shuangpin_seg.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA6D212D6EC0006C60D5 /* shuangpin_seg.h */; };
+		E97C7A7C212F06F0000B8F41 /* quanpin_trie.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C7212D5C9E006C60D5 /* quanpin_trie.h */; };
+		E97C7A7D212F06F0000B8F41 /* syllable.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C8212D5C9E006C60D5 /* syllable.h */; };
+		E97C7A7E212F06F0000B8F41 /* datrie_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C9212D5C9E006C60D5 /* datrie_impl.h */; };
+		E97C7A7F212F06F0000B8F41 /* datrie.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CA212D5C9E006C60D5 /* datrie.h */; };
+		E97C7A80212F06F0000B8F41 /* pinyin_data.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CB212D5C9E006C60D5 /* pinyin_data.h */; };
+		E97C7A81212F06F0000B8F41 /* pinyin_seg.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CD212D5C9E006C60D5 /* pinyin_seg.h */; };
+		E97C7A82212F06F0000B8F41 /* segmentor.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CE212D5C9E006C60D5 /* segmentor.h */; };
+		E97C7A83212F06F0000B8F41 /* pinyin_info.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CF212D5C9E006C60D5 /* pinyin_info.h */; };
+		E97C7A84212F06F0000B8F41 /* portability.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9B5212D5C9E006C60D5 /* portability.h */; };
+		E97C7A85212F06F0000B8F41 /* slm.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9D3212D5C9E006C60D5 /* slm.h */; };
+		E97C7A86212F0712000B8F41 /* SunPinyinLibWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA4F212D5ED7006C60D5 /* SunPinyinLibWrapper.mm */; };
+		E97C7A87212F0712000B8F41 /* imi_option_event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA6A212D6E9F006C60D5 /* imi_option_event.cpp */; };
+		E97C7A88212F0712000B8F41 /* imi_options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA64212D6E17006C60D5 /* imi_options.cpp */; };
+		E97C7A89212F0712000B8F41 /* lattice_states.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9B9212D5C9E006C60D5 /* lattice_states.cpp */; };
+		E97C7A8A212F0712000B8F41 /* imi_funcobjs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9BA212D5C9E006C60D5 /* imi_funcobjs.cpp */; };
+		E97C7A8B212F0712000B8F41 /* ic_history.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9BE212D5C9E006C60D5 /* ic_history.cpp */; };
+		E97C7A8C212F0712000B8F41 /* userdict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9C3212D5C9E006C60D5 /* userdict.cpp */; };
+		E97C7A8D212F0712000B8F41 /* imi_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9C4212D5C9E006C60D5 /* imi_context.cpp */; };
+		E97C7A8E212F0712000B8F41 /* imi_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9C2212D5C9E006C60D5 /* imi_data.cpp */; };
+		E97C7A8F212F0712000B8F41 /* pytrie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D7212D5C9E006C60D5 /* pytrie.cpp */; };
+		E97C7A90212F0712000B8F41 /* hunpin_seg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA73212D6F62006C60D5 /* hunpin_seg.cpp */; };
+		E97C7A91212F0712000B8F41 /* shuangpin_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA6F212D6EC0006C60D5 /* shuangpin_data.cpp */; };
+		E97C7A92212F0712000B8F41 /* shuangpin_seg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA6E212D6EC0006C60D5 /* shuangpin_seg.cpp */; };
+		E97C7A93212F0712000B8F41 /* pinyin_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D0212D5C9E006C60D5 /* pinyin_data.cpp */; };
+		E97C7A94212F0712000B8F41 /* pinyin_seg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9CC212D5C9E006C60D5 /* pinyin_seg.cpp */; };
+		E97C7A95212F0712000B8F41 /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D4212D5C9E006C60D5 /* portability.cpp */; };
+		E97C7A96212F0712000B8F41 /* slm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D2212D5C9E006C60D5 /* slm.cpp */; };
+		E97C7A97212F0726000B8F41 /* lm_sc.t3g in Resources */ = {isa = PBXBuildFile; fileRef = E91FE9A9212D5BC2006C60D5 /* lm_sc.t3g */; };
+		E97C7A98212F0726000B8F41 /* pydict_sc.bin in Resources */ = {isa = PBXBuildFile; fileRef = E91FE9AA212D5BC2006C60D5 /* pydict_sc.bin */; };
+		E97C7A9A212F078D000B8F41 /* SunPinyinLib_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E97C7A5E212F06AD000B8F41 /* SunPinyinLib_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E97C7AA7212F0B2B000B8F41 /* SunPinyinLib_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E97C7AA5212F0B2B000B8F41 /* SunPinyinLib_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E97C7AAA212F0B2B000B8F41 /* SunPinyinLib_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E97C7AA3212F0B2B000B8F41 /* SunPinyinLib_macOS.framework */; };
+		E97C7AAB212F0B2B000B8F41 /* SunPinyinLib_macOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E97C7AA3212F0B2B000B8F41 /* SunPinyinLib_macOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E97C7AB0212F0B60000B8F41 /* SunPinyinLibWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA52212D5EF6006C60D5 /* SunPinyinLibWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E97C7AB1212F0B60000B8F41 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C5212D5C9E006C60D5 /* config.h */; };
+		E97C7AB2212F0B60000B8F41 /* imi_option_event.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA69212D6E9F006C60D5 /* imi_option_event.h */; };
+		E97C7AB3212F0B60000B8F41 /* imi_keys.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA68212D6E69006C60D5 /* imi_keys.h */; };
+		E97C7AB4212F0B60000B8F41 /* imi_option_keys.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA67212D6E5E006C60D5 /* imi_option_keys.h */; };
+		E97C7AB5212F0B60000B8F41 /* imi_options.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA65212D6E17006C60D5 /* imi_options.h */; };
+		E97C7AB6212F0B60000B8F41 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9B8212D5C9E006C60D5 /* utils.h */; };
+		E97C7AB7212F0B60000B8F41 /* lattice_states.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BC212D5C9E006C60D5 /* lattice_states.h */; };
+		E97C7AB8212F0B60000B8F41 /* ic_history.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BB212D5C9E006C60D5 /* ic_history.h */; };
+		E97C7AB9212F0B60000B8F41 /* imi_funcobjs.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BD212D5C9E006C60D5 /* imi_funcobjs.h */; };
+		E97C7ABA212F0B60000B8F41 /* userdict.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9BF212D5C9E006C60D5 /* userdict.h */; };
+		E97C7ABB212F0B60000B8F41 /* imi_context.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C0212D5C9E006C60D5 /* imi_context.h */; };
+		E97C7ABC212F0B60000B8F41 /* imi_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C1212D5C9E006C60D5 /* imi_defines.h */; };
+		E97C7ABD212F0B60000B8F41 /* imi_data.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9B7212D5C9E006C60D5 /* imi_data.h */; };
+		E97C7ABE212F0B60000B8F41 /* pytrie.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9D6212D5C9E006C60D5 /* pytrie.h */; };
+		E97C7ABF212F0B60000B8F41 /* hunpin_seg.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA72212D6F61006C60D5 /* hunpin_seg.h */; };
+		E97C7AC0212F0B60000B8F41 /* shuangpin_data.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA6C212D6EC0006C60D5 /* shuangpin_data.h */; };
+		E97C7AC1212F0B60000B8F41 /* shuangpin_seg.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA6D212D6EC0006C60D5 /* shuangpin_seg.h */; };
+		E97C7AC2212F0B60000B8F41 /* quanpin_trie.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C7212D5C9E006C60D5 /* quanpin_trie.h */; };
+		E97C7AC3212F0B60000B8F41 /* syllable.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C8212D5C9E006C60D5 /* syllable.h */; };
+		E97C7AC4212F0B60000B8F41 /* datrie_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C9212D5C9E006C60D5 /* datrie_impl.h */; };
+		E97C7AC5212F0B60000B8F41 /* datrie.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CA212D5C9E006C60D5 /* datrie.h */; };
+		E97C7AC6212F0B60000B8F41 /* pinyin_data.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CB212D5C9E006C60D5 /* pinyin_data.h */; };
+		E97C7AC7212F0B60000B8F41 /* pinyin_seg.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CD212D5C9E006C60D5 /* pinyin_seg.h */; };
+		E97C7AC8212F0B60000B8F41 /* segmentor.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CE212D5C9E006C60D5 /* segmentor.h */; };
+		E97C7AC9212F0B60000B8F41 /* pinyin_info.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9CF212D5C9E006C60D5 /* pinyin_info.h */; };
+		E97C7ACA212F0B60000B8F41 /* slm.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9D3212D5C9E006C60D5 /* slm.h */; };
+		E97C7ACB212F0B85000B8F41 /* SunPinyinLibWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA4F212D5ED7006C60D5 /* SunPinyinLibWrapper.mm */; };
+		E97C7ACC212F0B85000B8F41 /* imi_option_event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA6A212D6E9F006C60D5 /* imi_option_event.cpp */; };
+		E97C7ACD212F0B85000B8F41 /* imi_options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA64212D6E17006C60D5 /* imi_options.cpp */; };
+		E97C7ACE212F0B85000B8F41 /* lattice_states.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9B9212D5C9E006C60D5 /* lattice_states.cpp */; };
+		E97C7ACF212F0B85000B8F41 /* imi_funcobjs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9BA212D5C9E006C60D5 /* imi_funcobjs.cpp */; };
+		E97C7AD0212F0B85000B8F41 /* ic_history.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9BE212D5C9E006C60D5 /* ic_history.cpp */; };
+		E97C7AD1212F0B85000B8F41 /* userdict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9C3212D5C9E006C60D5 /* userdict.cpp */; };
+		E97C7AD2212F0B85000B8F41 /* imi_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9C4212D5C9E006C60D5 /* imi_context.cpp */; };
+		E97C7AD3212F0B85000B8F41 /* imi_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9C2212D5C9E006C60D5 /* imi_data.cpp */; };
+		E97C7AD4212F0B85000B8F41 /* pytrie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D7212D5C9E006C60D5 /* pytrie.cpp */; };
+		E97C7AD5212F0B85000B8F41 /* hunpin_seg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA73212D6F62006C60D5 /* hunpin_seg.cpp */; };
+		E97C7AD6212F0B85000B8F41 /* shuangpin_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA6F212D6EC0006C60D5 /* shuangpin_data.cpp */; };
+		E97C7AD7212F0B85000B8F41 /* shuangpin_seg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA6E212D6EC0006C60D5 /* shuangpin_seg.cpp */; };
+		E97C7AD8212F0B85000B8F41 /* pinyin_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D0212D5C9E006C60D5 /* pinyin_data.cpp */; };
+		E97C7AD9212F0B85000B8F41 /* pinyin_seg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9CC212D5C9E006C60D5 /* pinyin_seg.cpp */; };
+		E97C7ADA212F0B85000B8F41 /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D4212D5C9E006C60D5 /* portability.cpp */; };
+		E97C7ADB212F0B85000B8F41 /* slm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D2212D5C9E006C60D5 /* slm.cpp */; };
+		E97C7ADC212F0B91000B8F41 /* lm_sc.t3g in Resources */ = {isa = PBXBuildFile; fileRef = E91FE9A9212D5BC2006C60D5 /* lm_sc.t3g */; };
+		E97C7ADD212F0B91000B8F41 /* pydict_sc.bin in Resources */ = {isa = PBXBuildFile; fileRef = E91FE9AA212D5BC2006C60D5 /* pydict_sc.bin */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E97C7A9B212F078D000B8F41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91FE97B212D5AAC006C60D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E97C7A5D212F06AD000B8F41;
+			remoteInfo = "SunPinyin-iOS";
+		};
+		E97C7AA8212F0B2B000B8F41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91FE97B212D5AAC006C60D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E97C7AA2212F0B2B000B8F41;
+			remoteInfo = "SunPinyinLib-macOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E97C7A9D212F078D000B8F41 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E97C7A9A212F078D000B8F41 /* SunPinyinLib_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7AAF212F0B2B000B8F41 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E97C7AAB212F0B2B000B8F41 /* SunPinyinLib_macOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E91FE9A9212D5BC2006C60D5 /* lm_sc.t3g */ = {isa = PBXFileReference; lastKnownFileType = file; path = lm_sc.t3g; sourceTree = "<group>"; };
+		E91FE9AA212D5BC2006C60D5 /* pydict_sc.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = pydict_sc.bin; sourceTree = "<group>"; };
+		E91FE9B5212D5C9E006C60D5 /* portability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portability.h; sourceTree = "<group>"; };
+		E91FE9B7212D5C9E006C60D5 /* imi_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imi_data.h; sourceTree = "<group>"; };
+		E91FE9B8212D5C9E006C60D5 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		E91FE9B9212D5C9E006C60D5 /* lattice_states.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lattice_states.cpp; sourceTree = "<group>"; };
+		E91FE9BA212D5C9E006C60D5 /* imi_funcobjs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imi_funcobjs.cpp; sourceTree = "<group>"; };
+		E91FE9BB212D5C9E006C60D5 /* ic_history.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ic_history.h; sourceTree = "<group>"; };
+		E91FE9BC212D5C9E006C60D5 /* lattice_states.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lattice_states.h; sourceTree = "<group>"; };
+		E91FE9BD212D5C9E006C60D5 /* imi_funcobjs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imi_funcobjs.h; sourceTree = "<group>"; };
+		E91FE9BE212D5C9E006C60D5 /* ic_history.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ic_history.cpp; sourceTree = "<group>"; };
+		E91FE9BF212D5C9E006C60D5 /* userdict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userdict.h; sourceTree = "<group>"; };
+		E91FE9C0212D5C9E006C60D5 /* imi_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imi_context.h; sourceTree = "<group>"; };
+		E91FE9C1212D5C9E006C60D5 /* imi_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imi_defines.h; sourceTree = "<group>"; };
+		E91FE9C2212D5C9E006C60D5 /* imi_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imi_data.cpp; sourceTree = "<group>"; };
+		E91FE9C3212D5C9E006C60D5 /* userdict.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = userdict.cpp; sourceTree = "<group>"; };
+		E91FE9C4212D5C9E006C60D5 /* imi_context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imi_context.cpp; sourceTree = "<group>"; };
+		E91FE9C5212D5C9E006C60D5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		E91FE9C7212D5C9E006C60D5 /* quanpin_trie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quanpin_trie.h; sourceTree = "<group>"; };
+		E91FE9C8212D5C9E006C60D5 /* syllable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syllable.h; sourceTree = "<group>"; };
+		E91FE9C9212D5C9E006C60D5 /* datrie_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datrie_impl.h; sourceTree = "<group>"; };
+		E91FE9CA212D5C9E006C60D5 /* datrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datrie.h; sourceTree = "<group>"; };
+		E91FE9CB212D5C9E006C60D5 /* pinyin_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin_data.h; sourceTree = "<group>"; };
+		E91FE9CC212D5C9E006C60D5 /* pinyin_seg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pinyin_seg.cpp; sourceTree = "<group>"; };
+		E91FE9CD212D5C9E006C60D5 /* pinyin_seg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin_seg.h; sourceTree = "<group>"; };
+		E91FE9CE212D5C9E006C60D5 /* segmentor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = segmentor.h; sourceTree = "<group>"; };
+		E91FE9CF212D5C9E006C60D5 /* pinyin_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin_info.h; sourceTree = "<group>"; };
+		E91FE9D0212D5C9E006C60D5 /* pinyin_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pinyin_data.cpp; sourceTree = "<group>"; };
+		E91FE9D2212D5C9E006C60D5 /* slm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = slm.cpp; sourceTree = "<group>"; };
+		E91FE9D3212D5C9E006C60D5 /* slm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slm.h; sourceTree = "<group>"; };
+		E91FE9D4212D5C9E006C60D5 /* portability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = portability.cpp; sourceTree = "<group>"; };
+		E91FE9D6212D5C9E006C60D5 /* pytrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pytrie.h; sourceTree = "<group>"; };
+		E91FE9D7212D5C9E006C60D5 /* pytrie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pytrie.cpp; sourceTree = "<group>"; };
+		E91FEA1A212D5D1C006C60D5 /* test-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91FEA1C212D5D1C006C60D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E91FEA1E212D5D1D006C60D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E91FEA21212D5D1D006C60D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E91FEA23212D5D1D006C60D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E91FEA24212D5D1D006C60D5 /* test_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = test_macOS.entitlements; sourceTree = "<group>"; };
+		E91FEA4F212D5ED7006C60D5 /* SunPinyinLibWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SunPinyinLibWrapper.mm; sourceTree = "<group>"; };
+		E91FEA52212D5EF6006C60D5 /* SunPinyinLibWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunPinyinLibWrapper.h; sourceTree = "<group>"; };
+		E91FEA64212D6E17006C60D5 /* imi_options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imi_options.cpp; sourceTree = "<group>"; };
+		E91FEA65212D6E17006C60D5 /* imi_options.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imi_options.h; sourceTree = "<group>"; };
+		E91FEA67212D6E5E006C60D5 /* imi_option_keys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imi_option_keys.h; sourceTree = "<group>"; };
+		E91FEA68212D6E69006C60D5 /* imi_keys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imi_keys.h; sourceTree = "<group>"; };
+		E91FEA69212D6E9F006C60D5 /* imi_option_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imi_option_event.h; sourceTree = "<group>"; };
+		E91FEA6A212D6E9F006C60D5 /* imi_option_event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = imi_option_event.cpp; sourceTree = "<group>"; };
+		E91FEA6C212D6EC0006C60D5 /* shuangpin_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shuangpin_data.h; sourceTree = "<group>"; };
+		E91FEA6D212D6EC0006C60D5 /* shuangpin_seg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shuangpin_seg.h; sourceTree = "<group>"; };
+		E91FEA6E212D6EC0006C60D5 /* shuangpin_seg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shuangpin_seg.cpp; sourceTree = "<group>"; };
+		E91FEA6F212D6EC0006C60D5 /* shuangpin_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shuangpin_data.cpp; sourceTree = "<group>"; };
+		E91FEA72212D6F61006C60D5 /* hunpin_seg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hunpin_seg.h; sourceTree = "<group>"; };
+		E91FEA73212D6F62006C60D5 /* hunpin_seg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hunpin_seg.cpp; sourceTree = "<group>"; };
+		E97C79BD212EFEEE000B8F41 /* test-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97C79BF212EFEEE000B8F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E97C79C1212EFEEE000B8F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E97C79C4212EFEEE000B8F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E97C79C6212EFEEE000B8F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E97C79C9212EFEEE000B8F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E97C79CB212EFEEE000B8F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E97C7A5E212F06AD000B8F41 /* SunPinyinLib_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunPinyinLib_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97C7A60212F06AD000B8F41 /* SunPinyinLib_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunPinyinLib_iOS.h; sourceTree = "<group>"; };
+		E97C7A61212F06AD000B8F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E97C7AA3212F0B2B000B8F41 /* SunPinyinLib_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunPinyinLib_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97C7AA5212F0B2B000B8F41 /* SunPinyinLib_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunPinyinLib_macOS.h; sourceTree = "<group>"; };
+		E97C7AA6212F0B2B000B8F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E91FEA17212D5D1C006C60D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C7AAA212F0B2B000B8F41 /* SunPinyinLib_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C79BA212EFEEE000B8F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7A5B212F06AD000B8F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7AA0212F0B2B000B8F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E91FE97A212D5AAC006C60D5 = {
+			isa = PBXGroup;
+			children = (
+				E91FE9B4212D5C35006C60D5 /* sunpinyin */,
+				E91FEA1B212D5D1C006C60D5 /* test-macOS */,
+				E97C79BE212EFEEE000B8F41 /* test-iOS */,
+				E97C7A5F212F06AD000B8F41 /* SunPinyinLib-iOS */,
+				E97C7AA4212F0B2B000B8F41 /* SunPinyinLib-macOS */,
+				E91FE985212D5AAC006C60D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E91FE985212D5AAC006C60D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E91FEA1A212D5D1C006C60D5 /* test-macOS.app */,
+				E97C79BD212EFEEE000B8F41 /* test-iOS.app */,
+				E97C7A5E212F06AD000B8F41 /* SunPinyinLib_iOS.framework */,
+				E97C7AA3212F0B2B000B8F41 /* SunPinyinLib_macOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E91FE9B4212D5C35006C60D5 /* sunpinyin */ = {
+			isa = PBXGroup;
+			children = (
+				E91FEA4E212D5EC1006C60D5 /* wrapper */,
+				E91FE9C5212D5C9E006C60D5 /* config.h */,
+				E91FE9B6212D5C9E006C60D5 /* ime-core */,
+				E91FE9D5212D5C9E006C60D5 /* lexicon */,
+				E91FE9C6212D5C9E006C60D5 /* pinyin */,
+				E91FE9D4212D5C9E006C60D5 /* portability.cpp */,
+				E91FE9B5212D5C9E006C60D5 /* portability.h */,
+				E91FE9D1212D5C9E006C60D5 /* slm */,
+				E91FE9A9212D5BC2006C60D5 /* lm_sc.t3g */,
+				E91FE9AA212D5BC2006C60D5 /* pydict_sc.bin */,
+			);
+			path = sunpinyin;
+			sourceTree = "<group>";
+		};
+		E91FE9B6212D5C9E006C60D5 /* ime-core */ = {
+			isa = PBXGroup;
+			children = (
+				E91FEA6A212D6E9F006C60D5 /* imi_option_event.cpp */,
+				E91FEA69212D6E9F006C60D5 /* imi_option_event.h */,
+				E91FEA68212D6E69006C60D5 /* imi_keys.h */,
+				E91FEA67212D6E5E006C60D5 /* imi_option_keys.h */,
+				E91FEA64212D6E17006C60D5 /* imi_options.cpp */,
+				E91FEA65212D6E17006C60D5 /* imi_options.h */,
+				E91FE9B8212D5C9E006C60D5 /* utils.h */,
+				E91FE9B9212D5C9E006C60D5 /* lattice_states.cpp */,
+				E91FE9BC212D5C9E006C60D5 /* lattice_states.h */,
+				E91FE9BA212D5C9E006C60D5 /* imi_funcobjs.cpp */,
+				E91FE9BB212D5C9E006C60D5 /* ic_history.h */,
+				E91FE9BD212D5C9E006C60D5 /* imi_funcobjs.h */,
+				E91FE9BE212D5C9E006C60D5 /* ic_history.cpp */,
+				E91FE9BF212D5C9E006C60D5 /* userdict.h */,
+				E91FE9C3212D5C9E006C60D5 /* userdict.cpp */,
+				E91FE9C0212D5C9E006C60D5 /* imi_context.h */,
+				E91FE9C4212D5C9E006C60D5 /* imi_context.cpp */,
+				E91FE9C1212D5C9E006C60D5 /* imi_defines.h */,
+				E91FE9B7212D5C9E006C60D5 /* imi_data.h */,
+				E91FE9C2212D5C9E006C60D5 /* imi_data.cpp */,
+			);
+			path = "ime-core";
+			sourceTree = "<group>";
+		};
+		E91FE9C6212D5C9E006C60D5 /* pinyin */ = {
+			isa = PBXGroup;
+			children = (
+				E91FEA73212D6F62006C60D5 /* hunpin_seg.cpp */,
+				E91FEA72212D6F61006C60D5 /* hunpin_seg.h */,
+				E91FEA6F212D6EC0006C60D5 /* shuangpin_data.cpp */,
+				E91FEA6C212D6EC0006C60D5 /* shuangpin_data.h */,
+				E91FEA6E212D6EC0006C60D5 /* shuangpin_seg.cpp */,
+				E91FEA6D212D6EC0006C60D5 /* shuangpin_seg.h */,
+				E91FE9C7212D5C9E006C60D5 /* quanpin_trie.h */,
+				E91FE9C8212D5C9E006C60D5 /* syllable.h */,
+				E91FE9C9212D5C9E006C60D5 /* datrie_impl.h */,
+				E91FE9CA212D5C9E006C60D5 /* datrie.h */,
+				E91FE9CB212D5C9E006C60D5 /* pinyin_data.h */,
+				E91FE9D0212D5C9E006C60D5 /* pinyin_data.cpp */,
+				E91FE9CC212D5C9E006C60D5 /* pinyin_seg.cpp */,
+				E91FE9CD212D5C9E006C60D5 /* pinyin_seg.h */,
+				E91FE9CE212D5C9E006C60D5 /* segmentor.h */,
+				E91FE9CF212D5C9E006C60D5 /* pinyin_info.h */,
+			);
+			path = pinyin;
+			sourceTree = "<group>";
+		};
+		E91FE9D1212D5C9E006C60D5 /* slm */ = {
+			isa = PBXGroup;
+			children = (
+				E91FE9D2212D5C9E006C60D5 /* slm.cpp */,
+				E91FE9D3212D5C9E006C60D5 /* slm.h */,
+			);
+			path = slm;
+			sourceTree = "<group>";
+		};
+		E91FE9D5212D5C9E006C60D5 /* lexicon */ = {
+			isa = PBXGroup;
+			children = (
+				E91FE9D6212D5C9E006C60D5 /* pytrie.h */,
+				E91FE9D7212D5C9E006C60D5 /* pytrie.cpp */,
+			);
+			path = lexicon;
+			sourceTree = "<group>";
+		};
+		E91FEA1B212D5D1C006C60D5 /* test-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E91FEA1C212D5D1C006C60D5 /* AppDelegate.swift */,
+				E91FEA1E212D5D1D006C60D5 /* Assets.xcassets */,
+				E91FEA20212D5D1D006C60D5 /* MainMenu.xib */,
+				E91FEA23212D5D1D006C60D5 /* Info.plist */,
+				E91FEA24212D5D1D006C60D5 /* test_macOS.entitlements */,
+			);
+			path = "test-macOS";
+			sourceTree = "<group>";
+		};
+		E91FEA4E212D5EC1006C60D5 /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E91FEA4F212D5ED7006C60D5 /* SunPinyinLibWrapper.mm */,
+				E91FEA52212D5EF6006C60D5 /* SunPinyinLibWrapper.h */,
+			);
+			path = wrapper;
+			sourceTree = "<group>";
+		};
+		E97C79BE212EFEEE000B8F41 /* test-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E97C79BF212EFEEE000B8F41 /* AppDelegate.swift */,
+				E97C79C1212EFEEE000B8F41 /* ViewController.swift */,
+				E97C79C3212EFEEE000B8F41 /* Main.storyboard */,
+				E97C79C6212EFEEE000B8F41 /* Assets.xcassets */,
+				E97C79C8212EFEEE000B8F41 /* LaunchScreen.storyboard */,
+				E97C79CB212EFEEE000B8F41 /* Info.plist */,
+			);
+			path = "test-iOS";
+			sourceTree = "<group>";
+		};
+		E97C7A5F212F06AD000B8F41 /* SunPinyinLib-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E97C7A60212F06AD000B8F41 /* SunPinyinLib_iOS.h */,
+				E97C7A61212F06AD000B8F41 /* Info.plist */,
+			);
+			path = "SunPinyinLib-iOS";
+			sourceTree = "<group>";
+		};
+		E97C7AA4212F0B2B000B8F41 /* SunPinyinLib-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E97C7AA5212F0B2B000B8F41 /* SunPinyinLib_macOS.h */,
+				E97C7AA6212F0B2B000B8F41 /* Info.plist */,
+			);
+			path = "SunPinyinLib-macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E97C7A59212F06AD000B8F41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C7A62212F06AD000B8F41 /* SunPinyinLib_iOS.h in Headers */,
+				E97C7A6A212F06F0000B8F41 /* SunPinyinLibWrapper.h in Headers */,
+				E97C7A6B212F06F0000B8F41 /* config.h in Headers */,
+				E97C7A6C212F06F0000B8F41 /* imi_option_event.h in Headers */,
+				E97C7A6D212F06F0000B8F41 /* imi_keys.h in Headers */,
+				E97C7A6E212F06F0000B8F41 /* imi_option_keys.h in Headers */,
+				E97C7A6F212F06F0000B8F41 /* imi_options.h in Headers */,
+				E97C7A70212F06F0000B8F41 /* utils.h in Headers */,
+				E97C7A71212F06F0000B8F41 /* lattice_states.h in Headers */,
+				E97C7A72212F06F0000B8F41 /* ic_history.h in Headers */,
+				E97C7A73212F06F0000B8F41 /* imi_funcobjs.h in Headers */,
+				E97C7A74212F06F0000B8F41 /* userdict.h in Headers */,
+				E97C7A75212F06F0000B8F41 /* imi_context.h in Headers */,
+				E97C7A76212F06F0000B8F41 /* imi_defines.h in Headers */,
+				E97C7A77212F06F0000B8F41 /* imi_data.h in Headers */,
+				E97C7A78212F06F0000B8F41 /* pytrie.h in Headers */,
+				E97C7A79212F06F0000B8F41 /* hunpin_seg.h in Headers */,
+				E97C7A7A212F06F0000B8F41 /* shuangpin_data.h in Headers */,
+				E97C7A7B212F06F0000B8F41 /* shuangpin_seg.h in Headers */,
+				E97C7A7C212F06F0000B8F41 /* quanpin_trie.h in Headers */,
+				E97C7A7D212F06F0000B8F41 /* syllable.h in Headers */,
+				E97C7A7E212F06F0000B8F41 /* datrie_impl.h in Headers */,
+				E97C7A7F212F06F0000B8F41 /* datrie.h in Headers */,
+				E97C7A80212F06F0000B8F41 /* pinyin_data.h in Headers */,
+				E97C7A81212F06F0000B8F41 /* pinyin_seg.h in Headers */,
+				E97C7A82212F06F0000B8F41 /* segmentor.h in Headers */,
+				E97C7A83212F06F0000B8F41 /* pinyin_info.h in Headers */,
+				E97C7A84212F06F0000B8F41 /* portability.h in Headers */,
+				E97C7A85212F06F0000B8F41 /* slm.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7A9E212F0B2B000B8F41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C7AA7212F0B2B000B8F41 /* SunPinyinLib_macOS.h in Headers */,
+				E97C7AB0212F0B60000B8F41 /* SunPinyinLibWrapper.h in Headers */,
+				E97C7AB1212F0B60000B8F41 /* config.h in Headers */,
+				E97C7AB2212F0B60000B8F41 /* imi_option_event.h in Headers */,
+				E97C7AB3212F0B60000B8F41 /* imi_keys.h in Headers */,
+				E97C7AB4212F0B60000B8F41 /* imi_option_keys.h in Headers */,
+				E97C7AB5212F0B60000B8F41 /* imi_options.h in Headers */,
+				E97C7AB6212F0B60000B8F41 /* utils.h in Headers */,
+				E97C7AB7212F0B60000B8F41 /* lattice_states.h in Headers */,
+				E97C7AB8212F0B60000B8F41 /* ic_history.h in Headers */,
+				E97C7AB9212F0B60000B8F41 /* imi_funcobjs.h in Headers */,
+				E97C7ABA212F0B60000B8F41 /* userdict.h in Headers */,
+				E97C7ABB212F0B60000B8F41 /* imi_context.h in Headers */,
+				E97C7ABC212F0B60000B8F41 /* imi_defines.h in Headers */,
+				E97C7ABD212F0B60000B8F41 /* imi_data.h in Headers */,
+				E97C7ABE212F0B60000B8F41 /* pytrie.h in Headers */,
+				E97C7ABF212F0B60000B8F41 /* hunpin_seg.h in Headers */,
+				E97C7AC0212F0B60000B8F41 /* shuangpin_data.h in Headers */,
+				E97C7AC1212F0B60000B8F41 /* shuangpin_seg.h in Headers */,
+				E97C7AC2212F0B60000B8F41 /* quanpin_trie.h in Headers */,
+				E97C7AC3212F0B60000B8F41 /* syllable.h in Headers */,
+				E97C7AC4212F0B60000B8F41 /* datrie_impl.h in Headers */,
+				E97C7AC5212F0B60000B8F41 /* datrie.h in Headers */,
+				E97C7AC6212F0B60000B8F41 /* pinyin_data.h in Headers */,
+				E97C7AC7212F0B60000B8F41 /* pinyin_seg.h in Headers */,
+				E97C7AC8212F0B60000B8F41 /* segmentor.h in Headers */,
+				E97C7AC9212F0B60000B8F41 /* pinyin_info.h in Headers */,
+				E97C7ACA212F0B60000B8F41 /* slm.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E91FEA19212D5D1C006C60D5 /* test-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E91FEA25212D5D1D006C60D5 /* Build configuration list for PBXNativeTarget "test-macOS" */;
+			buildPhases = (
+				E91FEA16212D5D1C006C60D5 /* Sources */,
+				E91FEA17212D5D1C006C60D5 /* Frameworks */,
+				E91FEA18212D5D1C006C60D5 /* Resources */,
+				E97C7AAF212F0B2B000B8F41 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E97C7AA9212F0B2B000B8F41 /* PBXTargetDependency */,
+			);
+			name = "test-macOS";
+			productName = "test-macOS";
+			productReference = E91FEA1A212D5D1C006C60D5 /* test-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E97C79BC212EFEEE000B8F41 /* test-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E97C79CC212EFEEE000B8F41 /* Build configuration list for PBXNativeTarget "test-iOS" */;
+			buildPhases = (
+				E97C79B9212EFEEE000B8F41 /* Sources */,
+				E97C79BA212EFEEE000B8F41 /* Frameworks */,
+				E97C79BB212EFEEE000B8F41 /* Resources */,
+				E97C7A9D212F078D000B8F41 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E97C7A9C212F078D000B8F41 /* PBXTargetDependency */,
+			);
+			name = "test-iOS";
+			productName = "test-iOS";
+			productReference = E97C79BD212EFEEE000B8F41 /* test-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E97C7A5D212F06AD000B8F41 /* SunPinyinLib-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E97C7A67212F06AD000B8F41 /* Build configuration list for PBXNativeTarget "SunPinyinLib-iOS" */;
+			buildPhases = (
+				E97C7A59212F06AD000B8F41 /* Headers */,
+				E97C7A5A212F06AD000B8F41 /* Sources */,
+				E97C7A5B212F06AD000B8F41 /* Frameworks */,
+				E97C7A5C212F06AD000B8F41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SunPinyinLib-iOS";
+			productName = "SunPinyin-iOS";
+			productReference = E97C7A5E212F06AD000B8F41 /* SunPinyinLib_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E97C7AA2212F0B2B000B8F41 /* SunPinyinLib-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E97C7AAC212F0B2B000B8F41 /* Build configuration list for PBXNativeTarget "SunPinyinLib-macOS" */;
+			buildPhases = (
+				E97C7A9E212F0B2B000B8F41 /* Headers */,
+				E97C7A9F212F0B2B000B8F41 /* Sources */,
+				E97C7AA0212F0B2B000B8F41 /* Frameworks */,
+				E97C7AA1212F0B2B000B8F41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SunPinyinLib-macOS";
+			productName = "SunPinyinLib-macOS";
+			productReference = E97C7AA3212F0B2B000B8F41 /* SunPinyinLib_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E91FE97B212D5AAC006C60D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = R0uter;
+				TargetAttributes = {
+					E91FEA19212D5D1C006C60D5 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E97C79BC212EFEEE000B8F41 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E97C7A5D212F06AD000B8F41 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					E97C7AA2212F0B2B000B8F41 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = E91FE97E212D5AAC006C60D5 /* Build configuration list for PBXProject "SunPinyinLib" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E91FE97A212D5AAC006C60D5;
+			productRefGroup = E91FE985212D5AAC006C60D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E91FEA19212D5D1C006C60D5 /* test-macOS */,
+				E97C79BC212EFEEE000B8F41 /* test-iOS */,
+				E97C7A5D212F06AD000B8F41 /* SunPinyinLib-iOS */,
+				E97C7AA2212F0B2B000B8F41 /* SunPinyinLib-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E91FEA18212D5D1C006C60D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91FEA1F212D5D1D006C60D5 /* Assets.xcassets in Resources */,
+				E91FEA22212D5D1D006C60D5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C79BB212EFEEE000B8F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C79CA212EFEEE000B8F41 /* LaunchScreen.storyboard in Resources */,
+				E97C79C7212EFEEE000B8F41 /* Assets.xcassets in Resources */,
+				E97C79C5212EFEEE000B8F41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7A5C212F06AD000B8F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C7A97212F0726000B8F41 /* lm_sc.t3g in Resources */,
+				E97C7A98212F0726000B8F41 /* pydict_sc.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7AA1212F0B2B000B8F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C7ADC212F0B91000B8F41 /* lm_sc.t3g in Resources */,
+				E97C7ADD212F0B91000B8F41 /* pydict_sc.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E91FEA16212D5D1C006C60D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E91FEA1D212D5D1C006C60D5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C79B9212EFEEE000B8F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C79C2212EFEEE000B8F41 /* ViewController.swift in Sources */,
+				E97C79C0212EFEEE000B8F41 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7A5A212F06AD000B8F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C7A86212F0712000B8F41 /* SunPinyinLibWrapper.mm in Sources */,
+				E97C7A87212F0712000B8F41 /* imi_option_event.cpp in Sources */,
+				E97C7A88212F0712000B8F41 /* imi_options.cpp in Sources */,
+				E97C7A89212F0712000B8F41 /* lattice_states.cpp in Sources */,
+				E97C7A8A212F0712000B8F41 /* imi_funcobjs.cpp in Sources */,
+				E97C7A8B212F0712000B8F41 /* ic_history.cpp in Sources */,
+				E97C7A8C212F0712000B8F41 /* userdict.cpp in Sources */,
+				E97C7A8D212F0712000B8F41 /* imi_context.cpp in Sources */,
+				E97C7A8E212F0712000B8F41 /* imi_data.cpp in Sources */,
+				E97C7A8F212F0712000B8F41 /* pytrie.cpp in Sources */,
+				E97C7A90212F0712000B8F41 /* hunpin_seg.cpp in Sources */,
+				E97C7A91212F0712000B8F41 /* shuangpin_data.cpp in Sources */,
+				E97C7A92212F0712000B8F41 /* shuangpin_seg.cpp in Sources */,
+				E97C7A93212F0712000B8F41 /* pinyin_data.cpp in Sources */,
+				E97C7A94212F0712000B8F41 /* pinyin_seg.cpp in Sources */,
+				E97C7A95212F0712000B8F41 /* portability.cpp in Sources */,
+				E97C7A96212F0712000B8F41 /* slm.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E97C7A9F212F0B2B000B8F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C7ACB212F0B85000B8F41 /* SunPinyinLibWrapper.mm in Sources */,
+				E97C7ACC212F0B85000B8F41 /* imi_option_event.cpp in Sources */,
+				E97C7ACD212F0B85000B8F41 /* imi_options.cpp in Sources */,
+				E97C7ACE212F0B85000B8F41 /* lattice_states.cpp in Sources */,
+				E97C7ACF212F0B85000B8F41 /* imi_funcobjs.cpp in Sources */,
+				E97C7AD0212F0B85000B8F41 /* ic_history.cpp in Sources */,
+				E97C7AD1212F0B85000B8F41 /* userdict.cpp in Sources */,
+				E97C7AD2212F0B85000B8F41 /* imi_context.cpp in Sources */,
+				E97C7AD3212F0B85000B8F41 /* imi_data.cpp in Sources */,
+				E97C7AD4212F0B85000B8F41 /* pytrie.cpp in Sources */,
+				E97C7AD5212F0B85000B8F41 /* hunpin_seg.cpp in Sources */,
+				E97C7AD6212F0B85000B8F41 /* shuangpin_data.cpp in Sources */,
+				E97C7AD7212F0B85000B8F41 /* shuangpin_seg.cpp in Sources */,
+				E97C7AD8212F0B85000B8F41 /* pinyin_data.cpp in Sources */,
+				E97C7AD9212F0B85000B8F41 /* pinyin_seg.cpp in Sources */,
+				E97C7ADA212F0B85000B8F41 /* portability.cpp in Sources */,
+				E97C7ADB212F0B85000B8F41 /* slm.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E97C7A9C212F078D000B8F41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E97C7A5D212F06AD000B8F41 /* SunPinyinLib-iOS */;
+			targetProxy = E97C7A9B212F078D000B8F41 /* PBXContainerItemProxy */;
+		};
+		E97C7AA9212F0B2B000B8F41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E97C7AA2212F0B2B000B8F41 /* SunPinyinLib-macOS */;
+			targetProxy = E97C7AA8212F0B2B000B8F41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E91FEA20212D5D1D006C60D5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E91FEA21212D5D1D006C60D5 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E97C79C3212EFEEE000B8F41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E97C79C4212EFEEE000B8F41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E97C79C8212EFEEE000B8F41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E97C79C9212EFEEE000B8F41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E91FE98A212D5AAC006C60D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DMACOSX",
+					"-DHAVE_CONFIG_H",
+					"$(OTHER_CPLUSPLUSFLAGS_QUOTED_FOR_TARGET_1)",
+					"$(OTHER_CPLUSPLUSFLAGS_QUOTED_FOR_TARGET_2)",
+				);
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lsqlite3",
+				);
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VALID_ARCHS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E91FE98B212D5AAC006C60D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DMACOSX",
+					"-DHAVE_CONFIG_H",
+					"$(OTHER_CPLUSPLUSFLAGS_QUOTED_FOR_TARGET_1)",
+					"$(OTHER_CPLUSPLUSFLAGS_QUOTED_FOR_TARGET_2)",
+				);
+				OTHER_LDFLAGS = (
+					"-liconv",
+					"-lsqlite3",
+				);
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VALID_ARCHS = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E91FEA26212D5D1D006C60D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "test-macOS/test_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "test-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.test-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		E91FEA27212D5D1D006C60D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "test-macOS/test_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "test-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.test-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+		E97C79CD212EFEEE000B8F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "test-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.test-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		E97C79CE212EFEEE000B8F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "test-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.test-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		E97C7A68212F06AD000B8F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SunPinyinLib-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.SunPinyin-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		E97C7A69212F06AD000B8F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/SunPinyinLib-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.SunPinyin-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		E97C7AAD212F0B2B000B8F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "SunPinyinLib-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.SunPinyinLib-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		E97C7AAE212F0B2B000B8F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "SunPinyinLib-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.SunPinyinLib-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E91FE97E212D5AAC006C60D5 /* Build configuration list for PBXProject "SunPinyinLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91FE98A212D5AAC006C60D5 /* Debug */,
+				E91FE98B212D5AAC006C60D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E91FEA25212D5D1D006C60D5 /* Build configuration list for PBXNativeTarget "test-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E91FEA26212D5D1D006C60D5 /* Debug */,
+				E91FEA27212D5D1D006C60D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E97C79CC212EFEEE000B8F41 /* Build configuration list for PBXNativeTarget "test-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E97C79CD212EFEEE000B8F41 /* Debug */,
+				E97C79CE212EFEEE000B8F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E97C7A67212F06AD000B8F41 /* Build configuration list for PBXNativeTarget "SunPinyinLib-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E97C7A68212F06AD000B8F41 /* Debug */,
+				E97C7A69212F06AD000B8F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E97C7AAC212F0B2B000B8F41 /* Build configuration list for PBXNativeTarget "SunPinyinLib-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E97C7AAD212F0B2B000B8F41 /* Debug */,
+				E97C7AAE212F0B2B000B8F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E91FE97B212D5AAC006C60D5 /* Project object */;
+}
