@@ -50,7 +50,7 @@ CGetCorrectionPairOp::operator ()(std::string& pystr, unsigned& matched_len)
     for (; it != ite; ++it) {
         std::string& k = it->first;
         std::string& v = it->second;
-        unsigned l = k.size();
+        unsigned l = (unsigned)k.size();
 
         if (pystr.size() >= l && !pystr.compare(pystr.size() - l, l, k)) {
             matched_len = l;
@@ -243,13 +243,13 @@ CQuanpinSegmentor::push(unsigned ch)
         const char * v = (*m_pGetCorrectionPairOp)(m_pystr, l);
 
         if (v) {
-            unsigned orig_size = m_segs.size();
-            _clear(m_pystr.size() - l);
+            unsigned orig_size = (unsigned)m_segs.size();
+            _clear((unsigned)m_pystr.size() - l);
             m_updatedFrom = _updateWith(v);
 
             if (m_segs.size() >= orig_size) {
                 // does not get better segmentation, revert to original
-                _clear(m_pystr.size() - strlen(v));
+                _clear((unsigned)m_pystr.size() - (unsigned)strlen(v));
                 std::string new_pystr;
                 std::copy(m_inputBuf.end() - l, m_inputBuf.end(),
                           back_inserter(new_pystr));
@@ -278,7 +278,7 @@ CQuanpinSegmentor::pop()
     if (m_pystr.empty())
         return m_updatedFrom = 0;
 
-    unsigned size = m_inputBuf.size();
+    unsigned size = (unsigned)m_inputBuf.size();
     m_inputBuf.resize(size - 1);
     m_pystr.resize(size - 1);
 
@@ -391,10 +391,10 @@ CQuanpinSegmentor::_push(unsigned ch)
         else
             seg_type = IPySegmentor::STRING;
 
-        ret = m_pystr.size() - 1;
+        ret = (unsigned)m_pystr.size() - 1;
         m_segs.push_back(TSegment(ch, ret, 1, seg_type));
     } else if (l == 1) { // possible a new segment
-        int last_idx = m_pystr.size() - 2;
+        int last_idx = (int)m_pystr.size() - 2;
         if (last_idx >= 0 && (m_pystr[last_idx] & 0x80)) {
             // check if the last syllable character's highest bitmask is set
             // e.g., feN, so [feN] + g -> [feng]
@@ -406,7 +406,7 @@ CQuanpinSegmentor::_push(unsigned ch)
             if (l == (unsigned) last_seg.m_len + 1) {
                 last_seg.m_len += 1;
                 last_seg.m_syllables[0] = v;
-                ret = m_pystr.size() - l;
+                ret = (unsigned)m_pystr.size() - l;
                 goto RETURN;
             }
 
@@ -415,22 +415,22 @@ CQuanpinSegmentor::_push(unsigned ch)
         }
 
         // push the new 1-length segment
-        ret = m_pystr.size() - 1;
+        ret = (unsigned)m_pystr.size() - 1;
         m_segs.push_back(TSegment(v, ret, 1));
     } else if (l == (unsigned) m_segs.back().m_len + 1) {
         // current segment is extensible, e.g., [xia] + n -> [xian]
         TSegment &last_seg = m_segs.back();
         last_seg.m_len += 1;
         last_seg.m_syllables[0] = v;
-        ret = m_pystr.size() - l;
+        ret = (unsigned)m_pystr.size() - l;
     } else {  // other cases
         TSegment &last_seg = m_segs.back();
         int i = 0, isum = last_seg.m_len + 1, lsum = l;
-        TSegmentVec new_segs(1, TSegment(v, m_pystr.size() - l, l));
+        TSegmentVec new_segs(1, TSegment(v, (unsigned)m_pystr.size() - l, l));
 
         // e.g., [zh] [o] [n] + g -> [zhonG],
         if (isum < lsum) {
-            unsigned end_idx = m_pystr.size() - 1;
+            unsigned end_idx = (unsigned)m_pystr.size() - 1;
             m_pystr[end_idx] |= 0x80;
         }
 
@@ -450,7 +450,7 @@ CQuanpinSegmentor::_push(unsigned ch)
 
         m_segs.erase(m_segs.end() - (i + 1), m_segs.end());
         std::copy(new_segs.rbegin(), new_segs.rend(), back_inserter(m_segs));
-        ret = m_pystr.size() - lsum;
+        ret = (unsigned)m_pystr.size() - lsum;
     }
 
 RETURN:;

@@ -27,6 +27,12 @@
 @property  BOOL iou2iu;
 @property  BOOL uei2ui;
 
+
+/**
+ 更新模糊音后触发更新
+ */
+- (void) updateFuzzConfig;
+
 /**
  从 buffer 获取拼音切分串
  

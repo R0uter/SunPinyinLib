@@ -59,7 +59,7 @@ bool CDATrie<T, encoder>::load(const char * fname){
     int fd = open(fname, O_RDONLY);
     if (fd == -1) return false;
 
-    m_memSize = lseek(fd, 0, SEEK_END);
+    m_memSize = (unsigned)lseek(fd, 0, SEEK_END);
     lseek(fd, 0, SEEK_SET);
 
 #ifdef HAVE_SYS_MMAN_H

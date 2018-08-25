@@ -63,7 +63,7 @@ CShuangpinSegmentor::pop()
     if (m_pystr.empty())
         return m_updatedFrom = 0;
 
-    unsigned size = m_inputBuf.size();
+    unsigned size = (unsigned)m_inputBuf.size();
 
     EShuangpinType shpType = s_shpData.getShuangpinType();
     bool isInputPy = (islower(m_pystr[size - 1]) ||
@@ -115,7 +115,7 @@ CShuangpinSegmentor::insertAt(unsigned idx, unsigned ch)
         m_hasInvalid = false;
     } else if (m_nLastValidPos + 1 == idx) {
         m_hasInvalid = false;
-        int nSize = m_pystr.size();
+        int nSize = (unsigned)m_pystr.size();
         if (islower(m_pystr[nSize - 1])) {
             m_nLastValidPos = idx - 1;
             new_pystr.insert((size_t)0, 1, m_pystr[nSize - 1]);
@@ -157,7 +157,7 @@ CShuangpinSegmentor::deleteAt(unsigned idx, bool backward)
         //del invalid ch, and do not effect current status.
         m_pystr.insert(idx, new_pystr);
         m_segs.insert(m_segs.end(), tmp_segs.begin(), tmp_segs.end());
-        return m_inputBuf.size() - 1;
+        return (unsigned)m_inputBuf.size() - 1;
     } else {
         m_hasInvalid = false;
         m_nAlpha = _getNumberOfNonAlpha();
@@ -246,7 +246,7 @@ CShuangpinSegmentor::_encode(const char* buf, char ch, bool isComplete)
     if (syls.empty())
         return -1;
 
-    const int len = m_pystr.size();
+    const int len = (int)m_pystr.size();
     CMappedYin::const_iterator iter = syls.begin();
     CMappedYin::const_iterator iter_end = syls.end();
 
@@ -289,7 +289,7 @@ CShuangpinSegmentor::_push(unsigned ch)
     EShuangpinType shpType;
 
     m_pystr.push_back(ch);
-    const int len = m_pystr.size();
+    const int len = (int)m_pystr.size();
     if (m_hasInvalid) {
         startFrom = len - 1;
         m_segs.push_back(TSegment(ch, startFrom, 1, IPySegmentor::INVALID));
@@ -322,7 +322,7 @@ CShuangpinSegmentor::_push(unsigned ch)
         startFrom = _encode(buf, ch, bCompleted);
         if (startFrom < 0) {
             m_hasInvalid = true;
-            startFrom = m_pystr.size() - 1;
+            startFrom = (int)m_pystr.size() - 1;
             m_segs.push_back(TSegment(ch, startFrom, 1, IPySegmentor::INVALID));
         }
     }

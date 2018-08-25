@@ -68,7 +68,7 @@ CHunpinSegmentor::_encode(const char* buf)
 
     TSegment &s = m_segs.back();
     s.m_len = 2;
-    s.m_start = m_pystr.size() - s.m_len;
+    s.m_start = (unsigned)m_pystr.size() - s.m_len;
     s.m_syllables.clear();
     s.m_type = IPySegmentor::SYLLABLE;
     for (; iter != iter_end; iter++) {
@@ -114,7 +114,7 @@ CHunpinSegmentor::pop()
     if (m_pystr.empty())
         return m_updatedFrom = 0;
 
-    unsigned size = m_inputBuf.size();
+    unsigned size = (unsigned)m_inputBuf.size();
     m_inputBuf.resize(size - 1);
     m_pystr.resize(size - 1);
 
@@ -231,7 +231,7 @@ CHunpinSegmentor::_push(unsigned ch)
         }
     }
 
-    unsigned strlen = m_pystr.size();
+    unsigned strlen = (unsigned)m_pystr.size();
     unsigned ret;
 
     for (int index = syllableCount; index >= 0; index--) {
@@ -271,10 +271,10 @@ CHunpinSegmentor::_push(unsigned ch)
                 } else {
                     seg_type = IPySegmentor::STRING;
                 }
-                ret = m_pystr.size() - 1;
+                ret = (unsigned)m_pystr.size() - 1;
                 m_segs.push_back(TSegment(ch, ret, 1, seg_type));
             } else {
-                ret = m_pystr.size() - 1;
+                ret = (unsigned)m_pystr.size() - 1;
                 m_segs.push_back(TSegment(v, ret, 1));
             }
         }

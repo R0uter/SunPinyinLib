@@ -68,7 +68,7 @@ public:
      * @return true if the event is consumed, and not intented to be
      *         sent to another event listener, false otherwise.
      */
-    virtual bool onConfigChanged(const COptionEvent&) { return false; }
+    virtual bool onConfigChanged(const COptionEvent& event) { return false; }
 };
 
 class COptionEventBus

@@ -468,7 +468,7 @@ CIMIContext::searchFrom(unsigned idx)
 
     for (size_t i = 0; i < m_maxBest; i++) {
         TPath path, segpath;
-        if (_backTracePaths(tail_states, m_nBest, path, segpath)) {
+        if (_backTracePaths(tail_states, (int)m_nBest, path, segpath)) {
             m_path.push_back(path);
             m_segPath.push_back(segpath);
             m_nBest++;
@@ -778,16 +778,16 @@ CIMIContext::getCandidates(unsigned frIdx, CCandidates& result)
         cp.m_candi.m_end = frIdx;
         if (fr.m_bwType != CLatticeFrame::NO_BESTWORD) {
             for (size_t i = 0; i < m_nBest; i++) {
-                if (fr.m_bestWords.find(i) == fr.m_bestWords.end())
+                if (fr.m_bestWords.find((int)i) == fr.m_bestWords.end())
                     continue;
-                CCandidate candi = fr.m_bestWords[i];
+                CCandidate candi = fr.m_bestWords[(int)i];
                 if (candi.m_start != m_candiStarts)
                     continue;
                 if (candi.m_pLexiconState == NULL)
                     continue;
 
                 TLexiconState & lxst = *(candi.m_pLexiconState);
-                int len = lxst.m_syls.size() - lxst.m_num_of_inner_fuzzies;
+                int len = (int)lxst.m_syls.size() - lxst.m_num_of_inner_fuzzies;
                 if (len == 0) len = 1;
 
                 cp.m_candi = candi;
@@ -808,7 +808,7 @@ CIMIContext::getCandidates(unsigned frIdx, CCandidates& result)
             if (lxst.m_start != m_candiStarts)
                 continue;
 
-            int len = lxst.m_syls.size() - lxst.m_num_of_inner_fuzzies;
+            int len = (int)lxst.m_syls.size() - lxst.m_num_of_inner_fuzzies;
             if (0 == len) len = 1;
 
             found = true;
@@ -860,7 +860,7 @@ CIMIContext::getCandidates(unsigned frIdx, CCandidates& result)
                 if (!cp.m_candi.m_cwstr)
                     continue;
 
-                int len = cp.m_candi.m_pLexiconState->m_syls.size() -
+                int len = (int)cp.m_candi.m_pLexiconState->m_syls.size() -
                           cp.m_candi.m_pLexiconState->m_num_of_inner_fuzzies;
                 if (0 == len) len = 1;
                 cp.m_Rank = TCandiRank(false,
@@ -933,7 +933,7 @@ CIMIContext::makeSelection(CCandidate &candi, bool doSearch)
     fr.m_selWord = candi;
     // make best sentence word consistent as well
     for (size_t i = 0; i < m_nBest; i++) {
-        fr.m_bestWords[i] = candi;
+        fr.m_bestWords[(int)i] = candi;
     }
 
     if (doSearch) searchFrom(candi.m_end);

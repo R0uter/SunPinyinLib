@@ -203,6 +203,7 @@ CCandidates candidates;
 }
 - (void) clearBuffer {
     _pySegmentor->clear();
+    _context->clear();
 }
 
 - (void) backwardBuffer {

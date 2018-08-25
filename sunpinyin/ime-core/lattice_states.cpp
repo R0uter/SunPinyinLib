@@ -45,7 +45,7 @@ TLexiconState::getWords(unsigned &num)
     num = 0;
 
     if (!m_words.empty()) {
-        num = m_words.size();
+        num = (unsigned)m_words.size();
         return &m_words[0];
     }
 
@@ -208,7 +208,7 @@ void
 CLatticeStates::_pushScoreHeap(TSentenceScore score, CSlmState slmState)
 {
     m_scoreHeap.push_back(std::make_pair(score, slmState));
-    _adjustUp(m_scoreHeap.size() - 1);
+    _adjustUp((int)m_scoreHeap.size() - 1);
 }
 
 void

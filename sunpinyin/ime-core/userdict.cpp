@@ -88,7 +88,7 @@ CUserDict::addWord(CSyllables &syllables, const wstring& word)
     sqlite3_prepare(m_db, sql_str, strlen(sql_str), &stmt, &tail);
 
     int i = 1;
-    sqlite3_bind_int(stmt, i++, syllables.size());
+    sqlite3_bind_int(stmt, i++, (int)syllables.size());
 
     CSyllables::iterator it = syllables.begin();
     CSyllables::iterator ite = syllables.end();

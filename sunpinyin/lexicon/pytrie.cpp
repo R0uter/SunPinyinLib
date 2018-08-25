@@ -24,9 +24,9 @@ int
 CPinyinTrie::lengthAt(unsigned int idx) const
 {
     if (idx < getWordCount() - 1) {
-        return (m_words[idx + 1] - m_words[idx]) - 1;
+        return (int)(m_words[idx + 1] - m_words[idx]) - 1;
     } else if (idx == getWordCount() - 1) {
-        return (((TWCHAR*)(m_mem + m_Size)) - m_words[idx]) - 1;
+        return (int)(((TWCHAR*)(m_mem + m_Size)) - m_words[idx]) - 1;
     }
     return 0;
 }

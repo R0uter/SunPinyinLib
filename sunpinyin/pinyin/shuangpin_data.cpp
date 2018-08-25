@@ -272,7 +272,7 @@ CShuangpinData::getMapString(const char *shpstr, CMappedYin &syls)
     assert(m_shuangpinPlan->mapinitials != NULL);
 
     const char *ch = shpstr;
-    int len = strlen(shpstr);
+    int len = (int)strlen(shpstr);
     char buf[32] = "\0";
 
     syls.clear();
@@ -316,7 +316,7 @@ CShuangpinData::getMapString(const char *shpstr, CMappedYin &syls)
         break;
     }
 
-    return syls.size();
+    return (int)syls.size();
 }
 
 void
