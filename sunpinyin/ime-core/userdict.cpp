@@ -85,7 +85,7 @@ CUserDict::addWord(CSyllables &syllables, const wstring& word)
          VALUES           (?,   ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?);";
     const char *tail;
 
-    sqlite3_prepare(m_db, sql_str, strlen(sql_str), &stmt, &tail);
+    sqlite3_prepare(m_db, sql_str, (int)strlen(sql_str), &stmt, &tail);
 
     int i = 1;
     sqlite3_bind_int(stmt, i++, (int)syllables.size());
@@ -103,10 +103,10 @@ CUserDict::addWord(CSyllables &syllables, const wstring& word)
 
     char buf[MAX_USRDEF_WORD_LEN * 6 + 1];
     WCSTOMBS(buf, word.c_str(), sizeof(buf) - 1);
-    sqlite3_bind_text(stmt, i, (const char*)buf, strlen(buf), NULL);
+    sqlite3_bind_text(stmt, i, (const char*)buf, (int)strlen(buf), NULL);
 
     unsigned ret = (SQLITE_DONE == sqlite3_step(stmt)) ?
-                   INI_USRDEF_WID + sqlite3_last_insert_rowid(m_db) :
+                   (unsigned)INI_USRDEF_WID + (unsigned)sqlite3_last_insert_rowid(m_db) :
                    0;
 
     sqlite3_finalize(stmt);
@@ -227,7 +227,7 @@ CUserDict::operator [](unsigned wid)
 
     sprintf(sql_str, "SELECT utf8str FROM dict WHERE id=%d;", wid);
 
-    rc = sqlite3_prepare(m_db, sql_str, strlen(sql_str), &stmt, &tail);
+    rc = sqlite3_prepare(m_db, sql_str, (int)strlen(sql_str), &stmt, &tail);
     if (rc != SQLITE_OK) {
         fprintf(stderr, "SQL error: %s\n", sqlite3_errmsg(m_db));
         return NULL;

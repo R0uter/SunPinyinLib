@@ -80,7 +80,7 @@ CPinyinTrie::load(const char *fname)
     int fd = open(fname, O_RDONLY);
     if (fd == -1) return false;
 
-    m_Size = lseek(fd, 0, SEEK_END);
+    m_Size = (unsigned)lseek(fd, 0, SEEK_END);
     lseek(fd, 0, SEEK_SET);
 
 #ifdef HAVE_SYS_MMAN_H
@@ -131,7 +131,7 @@ CPinyinTrie::print(const TNode* pRoot, std::string& prefix, FILE *fp) const
         for (unsigned int i = 0; i < sz; ++i) {
             unsigned int id = pwids[i].m_id;
             const TWCHAR *pw = operator[](id);
-            int len = WCSLEN(pw);
+            int len = (int)WCSLEN(pw);
             if (len != lengthAt(id)) {
                 printf(" (lengthAt %d error) ", id);
             }
