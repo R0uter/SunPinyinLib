@@ -63,6 +63,13 @@
  */
 - (NSString*) currentCandidate ;
 
+/**
+ 获取引擎内部当前buffer
+ 
+ @return 引擎内部当前buffer
+ */
+- (NSString*) currentBuffer;
+
 - (void) clearBuffer ;
 
 - (void) backwardBuffer;

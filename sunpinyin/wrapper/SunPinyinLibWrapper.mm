@@ -163,9 +163,7 @@ CCandidates candidates;
     }
 
     NSString *string = [self currentCandidate];
-    _context->clear();
     return string;
-
 }
 
 
@@ -180,7 +178,7 @@ CCandidates candidates;
         std::string::const_iterator it = s.begin();
         for (; it != s.end(); ++it) {
             _pySegmentor->push(*it & 0x7f);
-            _context->buildLattice(_pySegmentor,false);
+            _context->buildLattice(_pySegmentor,true);
         }
 }
 
@@ -201,6 +199,20 @@ CCandidates candidates;
     NSString *string = [[NSString alloc] initWithBytes:result.c_str() length:len encoding:UTF32Encoding];
     return string;
 }
+
+
+/**
+ 获取引擎内部当前buffer
+
+ @return 引擎内部当前buffer
+ */
+- (NSString*) currentBuffer {
+    wstring result;
+    result = _pySegmentor->getInputBuffer();
+    size_t len = result.length() * sizeof(TWCHAR);
+    NSString *string = [[NSString alloc] initWithBytes:result.c_str() length:len encoding:UTF32Encoding];
+    return string;
+}
 - (void) clearBuffer {
     _pySegmentor->clear();
     _context->clear();
@@ -208,7 +220,7 @@ CCandidates candidates;
 
 - (void) backwardBuffer {
     _pySegmentor->pop();
-    _context->buildLattice(_pySegmentor,false);
+    _context->buildLattice(_pySegmentor,true);
 }
 
 - (void) test {
