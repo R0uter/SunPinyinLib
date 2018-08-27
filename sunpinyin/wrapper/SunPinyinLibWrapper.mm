@@ -62,7 +62,6 @@
     
     _context = p.createContext();
     _context->setCoreData(data);
-    delete data;
     
     _pySegmentor = quanpin_policy.createPySegmentor();
 }
