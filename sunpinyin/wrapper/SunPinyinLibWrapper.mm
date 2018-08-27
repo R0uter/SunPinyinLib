@@ -179,7 +179,7 @@
     _context->buildLattice(_pySegmentor,true);
     //获取最佳候选
     wstring result;
-    _context->getBestSentence(result, 0,0);
+    _context->getBestSentence(result, 0,1);
     //转换成字符串返回
     size_t len = result.length() * sizeof(TWCHAR);
     NSString *string = [[NSString alloc] initWithBytes:result.c_str() length:len encoding:UTF32Encoding];
