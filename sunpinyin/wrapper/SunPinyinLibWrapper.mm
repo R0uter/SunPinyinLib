@@ -23,6 +23,7 @@
     @private
     CIMIContext *_context;
     IPySegmentor *_pySegmentor;
+    CIMIData *_data;
 //    std::vector<std::pair<int, wstring> > m_sentences;
 //    std::vector<std::pair<wstring, CCandidates> > m_tails;
 //    CCandidates candidates;
@@ -35,6 +36,8 @@
     
     _context->clear();
     delete _context;
+    
+    delete _data;
 }
 
 - (instancetype)init
@@ -49,19 +52,19 @@
 
 - (void)initContext
 {
-    CIMIData *data = new CIMIData();
+    _data = new CIMIData();
     NSBundle *bundle = [NSBundle bundleForClass:self.class];
     NSString *lmPath = [bundle pathForResource:@"lm_sc" ofType:@"t3g"];
     NSString *pytriePath = [bundle pathForResource:@"pydict_sc" ofType:@"bin"];
 
-    data->loadResource(lmPath.fileSystemRepresentation, pytriePath.fileSystemRepresentation);
+    _data->loadResource(lmPath.fileSystemRepresentation, pytriePath.fileSystemRepresentation);
     CSimplifiedChinesePolicy&  p =  ASimplifiedChinesePolicy::instance();
     CQuanpinSchemePolicy& quanpin_policy = AQuanpinSchemePolicy::instance();
     [self updateFuzzConfig];
     [self updateAutoCorrection];
     
     _context = p.createContext();
-    _context->setCoreData(data);
+    _context->setCoreData(_data);
     
     _pySegmentor = quanpin_policy.createPySegmentor();
 }
