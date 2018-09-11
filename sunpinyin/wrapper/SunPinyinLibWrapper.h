@@ -36,12 +36,19 @@
 - (void)updateFuzzConfig;
 
 /**
+ 全拼字符串切分，快速方便。
+ 
+ @param buffer 全拼字符串
+ @return 切分开的拼音
+ */
+- (NSArray<NSString *> *)pyStringFrom: (NSString *)buffer;
+
+/**
  从 buffer 获取拼音切分串
  
- @param  buffer 连续不带分隔的拼音串
  @return 切分好的拼音数组
  */
-- (NSArray<NSString *> *)pyStringFrom:(NSString *)buffer;
+- (NSArray<NSString *> *)pyStringFromCurrentBuffer;
 
 /**
  懒人模式，直接用拼音换整句，每次都是全新的

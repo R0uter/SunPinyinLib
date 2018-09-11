@@ -15,7 +15,6 @@
 		E97C79C5212EFEEE000B8F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97C79C3212EFEEE000B8F41 /* Main.storyboard */; };
 		E97C79C7212EFEEE000B8F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97C79C6212EFEEE000B8F41 /* Assets.xcassets */; };
 		E97C79CA212EFEEE000B8F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97C79C8212EFEEE000B8F41 /* LaunchScreen.storyboard */; };
-		E97C7A62212F06AD000B8F41 /* SunPinyinLib_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E97C7A60212F06AD000B8F41 /* SunPinyinLib_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E97C7A6A212F06F0000B8F41 /* SunPinyinLibWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA52212D5EF6006C60D5 /* SunPinyinLibWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E97C7A6B212F06F0000B8F41 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FE9C5212D5C9E006C60D5 /* config.h */; };
 		E97C7A6C212F06F0000B8F41 /* imi_option_event.h in Headers */ = {isa = PBXBuildFile; fileRef = E91FEA69212D6E9F006C60D5 /* imi_option_event.h */; };
@@ -219,8 +218,6 @@
 		E97C79C9212EFEEE000B8F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E97C79CB212EFEEE000B8F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E97C7A5E212F06AD000B8F41 /* SunPinyinLib_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunPinyinLib_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E97C7A60212F06AD000B8F41 /* SunPinyinLib_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunPinyinLib_iOS.h; sourceTree = "<group>"; };
-		E97C7A61212F06AD000B8F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E97C7AA3212F0B2B000B8F41 /* SunPinyinLib_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunPinyinLib_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97C7AA5212F0B2B000B8F41 /* SunPinyinLib_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunPinyinLib_macOS.h; sourceTree = "<group>"; };
 		E97C7AA6212F0B2B000B8F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,7 +262,6 @@
 				E91FE9B4212D5C35006C60D5 /* sunpinyin */,
 				E91FEA1B212D5D1C006C60D5 /* test-macOS */,
 				E97C79BE212EFEEE000B8F41 /* test-iOS */,
-				E97C7A5F212F06AD000B8F41 /* SunPinyinLib-iOS */,
 				E97C7AA4212F0B2B000B8F41 /* SunPinyinLib-macOS */,
 				E91FE985212D5AAC006C60D5 /* Products */,
 			);
@@ -401,15 +397,6 @@
 			path = "test-iOS";
 			sourceTree = "<group>";
 		};
-		E97C7A5F212F06AD000B8F41 /* SunPinyinLib-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				E97C7A60212F06AD000B8F41 /* SunPinyinLib_iOS.h */,
-				E97C7A61212F06AD000B8F41 /* Info.plist */,
-			);
-			path = "SunPinyinLib-iOS";
-			sourceTree = "<group>";
-		};
 		E97C7AA4212F0B2B000B8F41 /* SunPinyinLib-macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,7 +413,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E97C7A62212F06AD000B8F41 /* SunPinyinLib_iOS.h in Headers */,
 				E97C7A6A212F06F0000B8F41 /* SunPinyinLibWrapper.h in Headers */,
 				E97C7A6B212F06F0000B8F41 /* config.h in Headers */,
 				E97C7A6C212F06F0000B8F41 /* imi_option_event.h in Headers */,
@@ -1049,10 +1035,12 @@
 		E97C7AAD212F0B2B000B8F41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MVH6DNU2ZP;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1071,10 +1059,12 @@
 		E97C7AAE212F0B2B000B8F41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = MVH6DNU2ZP;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

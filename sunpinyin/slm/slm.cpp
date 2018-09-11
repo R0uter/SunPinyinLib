@@ -60,7 +60,7 @@ CThreadSlm::load(const char* fname, bool MMap)
         return false;
     }
 
-    m_bufSize = lseek(fd, 0, SEEK_END);
+    m_bufSize = (size_t)lseek(fd, 0, SEEK_END);
     lseek(fd, 0, SEEK_SET);
 
     m_bMMap = MMap;

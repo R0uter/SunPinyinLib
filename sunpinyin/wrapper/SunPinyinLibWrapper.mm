@@ -24,6 +24,7 @@
     CIMIContext *_context;
     IPySegmentor *_pySegmentor;
     CIMIData *_data;
+    IPySegmentor *_tmpPySegmentor;
 //    std::vector<std::pair<int, wstring> > m_sentences;
 //    std::vector<std::pair<wstring, CCandidates> > m_tails;
 //    CCandidates candidates;
@@ -33,6 +34,9 @@
 {
     _pySegmentor->clear();
     delete _pySegmentor;
+    
+    _tmpPySegmentor->clear();
+    delete _tmpPySegmentor;
     
     _context->clear();
     delete _context;
@@ -67,6 +71,7 @@
     _context->setCoreData(_data);
     
     _pySegmentor = quanpin_policy.createPySegmentor();
+    _tmpPySegmentor = quanpin_policy.createPySegmentor();
 }
 
 - (void)updateFuzzConfig
@@ -119,12 +124,32 @@
 
 
 /**
+  全拼字符串切分，快速方便。
+
+ @param buffer 全拼字符串
+ @return 切分开的拼音
+ */
+- (NSArray<NSString *> *)pyStringFrom: (NSString *)buffer {
+    std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
+    for (int i = (int)s.length(); i > 0; i--) {
+        _tmpPySegmentor->insertAt(0, s[i-1]);
+    }
+    NSMutableArray *list = NSMutableArray.array;
+    IPySegmentor::TSegmentVec v = _tmpPySegmentor->getSegments();
+    for (int i = 0; i < v.size(); i++) {
+        std::string s = CPinyinData::decodeSyllable(v[i].m_syllables[0]);
+        [list addObject:@(s.c_str())];
+    }
+    _tmpPySegmentor->clear();
+    return list;
+}
+
+/**
  从 buffer 获取拼音切分串
 
- @param  buffer 连续不带分隔的拼音串
  @return 切分好的拼音数组
  */
-- (NSArray<NSString *> *)pyStringFrom:(NSString *) buffer {
+- (NSArray<NSString *> *)pyStringFromCurrentBuffer {
     NSMutableArray *list = NSMutableArray.array;
     IPySegmentor::TSegmentVec v = _pySegmentor->getSegments();
     for (int i = 0; i < v.size(); i++) {
@@ -144,7 +169,7 @@
     //将buffer输入给 segmentor
     [self clearBuffer];
     std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
-    for (int i = (int)s.length(); i >= 0; i--) {
+    for (int i = (int)s.length(); i > 0; i--) {
         _pySegmentor->insertAt(0, s[i-1]);
     }
 

@@ -185,11 +185,11 @@ CBigramHistory::loadFromFile(const char *fname)
 
     struct stat info;
     fstat(fd, &info);
-    void* buf = malloc(info.st_size);
+    void* buf = malloc((unsigned long)info.st_size);
 
     if (buf) {
-        read(fd, buf, info.st_size);
-        suc = loadFromBuffer(buf, info.st_size);
+        read(fd, buf, (unsigned long)info.st_size);
+        suc = loadFromBuffer(buf, (unsigned long)info.st_size);
         free(buf);
     }
     close(fd);
