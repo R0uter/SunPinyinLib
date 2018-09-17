@@ -98,6 +98,7 @@
     if (_f2h)  fuzzy_pairs.push_back(std::make_pair("f",   "h"));
     if (_r2l)  fuzzy_pairs.push_back(std::make_pair("l",   "r"));
     if (_l2n)  fuzzy_pairs.push_back(std::make_pair("n",   "l"));
+    quanpin_policy.clearFuzzyPinyinPairs();
     quanpin_policy.setFuzzyPinyinPairs(fuzzy_pairs);
 }
 
@@ -131,8 +132,8 @@
  */
 - (NSArray<NSString *> *)pyStringFrom: (NSString *)buffer {
     std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
-    for (int i = (int)s.length(); i > 0; i--) {
-        _tmpPySegmentor->insertAt(0, s[i-1]);
+    for (int i = 0; i < s.length(); i++) {
+        _tmpPySegmentor->push(s[i]);
     }
     NSMutableArray *list = NSMutableArray.array;
     IPySegmentor::TSegmentVec v = _tmpPySegmentor->getSegments();
@@ -160,7 +161,7 @@
 }
 
 /**
- 懒人模式，直接用拼音换整句，每次都是全新的
+ 懒人模式，直接用拼音换整句，每次都是全新的，支持模糊音但无法支持纠错
 
  @param buffer 连续不带分隔的拼音串
  @return 计算好的中文字符串x1

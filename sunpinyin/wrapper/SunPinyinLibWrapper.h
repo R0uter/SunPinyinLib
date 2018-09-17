@@ -36,6 +36,10 @@
 - (void)updateFuzzConfig;
 
 /**
+ 更新全拼纠错后触发更新
+ */
+- (void)updateAutoCorrection;
+/**
  全拼字符串切分，快速方便。
  
  @param buffer 全拼字符串
@@ -51,7 +55,7 @@
 - (NSArray<NSString *> *)pyStringFromCurrentBuffer;
 
 /**
- 懒人模式，直接用拼音换整句，每次都是全新的
+ 懒人模式，直接用拼音换整句，每次都是全新的，支持模糊音但无法支持纠错
  
  @param buffer 连续不带分隔的拼音串
  @return 计算好的中文字符串x1
