@@ -138,6 +138,10 @@
     NSMutableArray *list = NSMutableArray.array;
     IPySegmentor::TSegmentVec v = _tmpPySegmentor->getSegments();
     for (int i = 0; i < v.size(); i++) {
+        if (v[i].m_syllables[0] == 39) {
+            [list addObject:@"'"];
+            continue;
+        }
         std::string s = CPinyinData::decodeSyllable(v[i].m_syllables[0]);
         [list addObject:@(s.c_str())];
     }
@@ -154,6 +158,10 @@
     NSMutableArray *list = NSMutableArray.array;
     IPySegmentor::TSegmentVec v = _pySegmentor->getSegments();
     for (int i = 0; i < v.size(); i++) {
+        if (v[i].m_syllables[0] == 39) {
+            [list addObject:@"'"];
+            continue;
+        }
         std::string s = CPinyinData::decodeSyllable(v[i].m_syllables[0]);
         [list addObject:@(s.c_str())];
     }
