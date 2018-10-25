@@ -64,6 +64,8 @@
     _data->loadResource(lmPath.fileSystemRepresentation, pytriePath.fileSystemRepresentation);
     CSimplifiedChinesePolicy&  p =  ASimplifiedChinesePolicy::instance();
     CQuanpinSchemePolicy& quanpin_policy = AQuanpinSchemePolicy::instance();
+    quanpin_policy.setFuzzySegmentation (true);
+//    quanpin_policy.setInnerFuzzySegmentation (true);
     [self updateFuzzConfig];
     [self updateAutoCorrection];
     
@@ -130,19 +132,26 @@
  @param buffer 全拼字符串
  @return 切分开的拼音
  */
-- (NSArray<NSString *> *)pyStringFrom: (NSString *)buffer {
+- (NSArray *)pyStringFrom: (NSString *)buffer {
     std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
     for (int i = 0; i < s.length(); i++) {
         _tmpPySegmentor->push(s[i]);
     }
     NSMutableArray *list = NSMutableArray.array;
     IPySegmentor::TSegmentVec v = _tmpPySegmentor->getSegments();
+    unsigned lastStart = -1;
+    unsigned lastEnd = -1;
     for (int i = 0; i < v.size(); i++) {
-        if (v[i].m_syllables[0] == 39) {
-            [list addObject:@"'"];
+        if (v[i].m_type == IPySegmentor::ESegmentType::SYLLABLE_SEP) {
+            continue;
+        }
+        if (v[i].m_start == lastStart || v[i].m_start+v[i].m_len == lastEnd) {
             continue;
         }
         std::string s = CPinyinData::decodeSyllable(v[i].m_syllables[0]);
+        lastStart = v[i].m_start;
+        lastEnd = v[i].m_len + lastStart;
+        
         [list addObject:@(s.c_str())];
     }
     _tmpPySegmentor->clear();
@@ -158,8 +167,8 @@
     NSMutableArray *list = NSMutableArray.array;
     IPySegmentor::TSegmentVec v = _pySegmentor->getSegments();
     for (int i = 0; i < v.size(); i++) {
-        if (v[i].m_syllables[0] == 39) {
-            [list addObject:@"'"];
+        if (v[i].m_type == IPySegmentor::ESegmentType::SYLLABLE_SEP) {
+//            [list addObject:@"'"];
             continue;
         }
         std::string s = CPinyinData::decodeSyllable(v[i].m_syllables[0]);
