@@ -81,7 +81,7 @@
     CQuanpinSchemePolicy& quanpin_policy = AQuanpinSchemePolicy::instance();
     string_pairs fuzzy_pairs;
     bool needFuzzy = _an2ang || _in2ing || _en2eng || _z2zh || _c2ch || _s2sh || _f2h || _r2l || _l2n;
-    quanpin_policy.setFuzzyForwarding(needFuzzy, false);
+    quanpin_policy.setFuzzyForwarding(needFuzzy, true);
     if (!needFuzzy) {
         quanpin_policy.clearFuzzyPinyinPairs();
         return;
