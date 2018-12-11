@@ -145,6 +145,9 @@
         if (v[i].m_type == IPySegmentor::ESegmentType::SYLLABLE_SEP) {
             continue;
         }
+        if (v[i].m_type == IPySegmentor::ESegmentType::STRING) {
+            continue;
+        }
         if (v[i].m_start == lastStart || v[i].m_start+v[i].m_len == lastEnd) {
             continue;
         }
@@ -169,6 +172,9 @@
     for (int i = 0; i < v.size(); i++) {
         if (v[i].m_type == IPySegmentor::ESegmentType::SYLLABLE_SEP) {
 //            [list addObject:@"'"];
+            continue;
+        }
+        if (v[i].m_type == IPySegmentor::ESegmentType::STRING) {
             continue;
         }
         std::string s = CPinyinData::decodeSyllable(v[i].m_syllables[0]);
