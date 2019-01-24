@@ -196,7 +196,8 @@
     for (int i = (int)s.length(); i > 0; i--) {
         _pySegmentor->insertAt(0, s[i-1]);
     }
-
+    //根据切分好的拼音段来查询模型
+    _context->buildLattice(_pySegmentor,true);
     NSString *string = [self currentCandidate];
     return string;
 }
@@ -208,13 +209,14 @@
 
  @param buffer 一个或多个字符
  */
-- (void)insertWithChar:(NSString *)buffer {
+- (NSString *)insertWithChar:(NSString *)buffer {
     std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
     std::string::const_iterator it = s.begin();
     for (; it != s.end(); ++it) {
         _pySegmentor->push(*it & 0x7f);
         _context->buildLattice(_pySegmentor,true);
     }
+    return [self currentCandidate];
 }
 
 
@@ -224,11 +226,11 @@
  @return 当前buffer生成的整句
  */
 - (NSString *)currentCandidate {
-    //根据切分好的拼音段来查询模型
-    _context->buildLattice(_pySegmentor,true);
+    
     //获取最佳候选
     wstring result;
-    _context->getBestSentence(result, 0,1);
+//    start 和 end 表示拼音的开始和结束，默认总0开始也就是第一个
+    _context->getBestSentence(result, 0,0);
     //转换成字符串返回
     size_t len = result.length() * sizeof(TWCHAR);
     NSString *string = [[NSString alloc] initWithBytes:result.c_str() length:len encoding:UTF32Encoding];

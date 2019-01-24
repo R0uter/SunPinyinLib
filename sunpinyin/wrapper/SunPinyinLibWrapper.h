@@ -67,7 +67,7 @@
  
  @param buffer 一个或多个字符
  */
-- (void)insertWithChar:(NSString *)buffer;
+- (NSString *)insertWithChar:(NSString *)buffer;
 
 /**
  获取当前buffer生成的整句，不清空buffer方便后续增减
