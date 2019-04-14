@@ -133,7 +133,13 @@
  @return 切分开的拼音
  */
 - (NSArray *)pyStringFrom: (NSString *)buffer {
-    std::string s = [buffer cStringUsingEncoding:NSASCIIStringEncoding];
+    NSString *str = buffer;
+    if ([buffer containsString:@"hm"]) {
+        str = [buffer stringByReplacingOccurrencesOfString:@"hm" withString:@"h'm"];
+    }
+    
+    
+    std::string s = [str cStringUsingEncoding:NSASCIIStringEncoding];
     for (int i = 0; i < s.length(); i++) {
         _tmpPySegmentor->push(s[i]);
     }
