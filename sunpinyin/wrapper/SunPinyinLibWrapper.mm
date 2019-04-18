@@ -235,8 +235,7 @@
     
     //获取最佳候选
     wstring result;
-//    start 和 end 表示拼音的开始和结束，默认总0开始也就是第一个
-    _context->getBestSentence(result, 0,0);
+    _context->getSelectedSentence(result);
     //转换成字符串返回
     size_t len = result.length() * sizeof(TWCHAR);
     NSString *string = [[NSString alloc] initWithBytes:result.c_str() length:len encoding:UTF32Encoding];
