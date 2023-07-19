@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91854F72181F158006A82C9 /* pinyin_data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91854F62181F158006A82C9 /* pinyin_data.swift */; };
 		E91FEA1D212D5D1C006C60D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FEA1C212D5D1C006C60D5 /* AppDelegate.swift */; };
 		E91FEA1F212D5D1D006C60D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91FEA1E212D5D1D006C60D5 /* Assets.xcassets */; };
 		E91FEA22212D5D1D006C60D5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E91FEA20212D5D1D006C60D5 /* MainMenu.xib */; };
+		E933AE0523F43DFC004183B8 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E933AE0423F43DFC004183B8 /* data.json */; };
+		E933AE0723F44AF3004183B8 /* longWordData.json in Resources */ = {isa = PBXBuildFile; fileRef = E933AE0623F44AF3004183B8 /* longWordData.json */; };
 		E97C79C0212EFEEE000B8F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C79BF212EFEEE000B8F41 /* AppDelegate.swift */; };
 		E97C79C2212EFEEE000B8F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C79C1212EFEEE000B8F41 /* ViewController.swift */; };
 		E97C79C5212EFEEE000B8F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97C79C3212EFEEE000B8F41 /* Main.storyboard */; };
@@ -112,6 +115,7 @@
 		E97C7ADB212F0B85000B8F41 /* slm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E91FE9D2212D5C9E006C60D5 /* slm.cpp */; };
 		E97C7ADC212F0B91000B8F41 /* lm_sc.t3g in Resources */ = {isa = PBXBuildFile; fileRef = E91FE9A9212D5BC2006C60D5 /* lm_sc.t3g */; };
 		E97C7ADD212F0B91000B8F41 /* pydict_sc.bin in Resources */ = {isa = PBXBuildFile; fileRef = E91FE9AA212D5BC2006C60D5 /* pydict_sc.bin */; };
+		E9EEC1A523F43D7200E31B19 /* wordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EEC1A423F43D7200E31B19 /* wordData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +161,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E91854F62181F158006A82C9 /* pinyin_data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinyin_data.swift; sourceTree = "<group>"; };
 		E91FE9A9212D5BC2006C60D5 /* lm_sc.t3g */ = {isa = PBXFileReference; lastKnownFileType = file; path = lm_sc.t3g; sourceTree = "<group>"; };
 		E91FE9AA212D5BC2006C60D5 /* pydict_sc.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = pydict_sc.bin; sourceTree = "<group>"; };
 		E91FE9B5212D5C9E006C60D5 /* portability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = portability.h; sourceTree = "<group>"; };
@@ -210,6 +215,8 @@
 		E91FEA6F212D6EC0006C60D5 /* shuangpin_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shuangpin_data.cpp; sourceTree = "<group>"; };
 		E91FEA72212D6F61006C60D5 /* hunpin_seg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hunpin_seg.h; sourceTree = "<group>"; };
 		E91FEA73212D6F62006C60D5 /* hunpin_seg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hunpin_seg.cpp; sourceTree = "<group>"; };
+		E933AE0423F43DFC004183B8 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		E933AE0623F44AF3004183B8 /* longWordData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = longWordData.json; sourceTree = "<group>"; };
 		E97C79BD212EFEEE000B8F41 /* test-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "test-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97C79BF212EFEEE000B8F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E97C79C1212EFEEE000B8F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +228,8 @@
 		E97C7AA3212F0B2B000B8F41 /* SunPinyinLib_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SunPinyinLib_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97C7AA5212F0B2B000B8F41 /* SunPinyinLib_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunPinyinLib_macOS.h; sourceTree = "<group>"; };
 		E97C7AA6212F0B2B000B8F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E994FD16246A79B00062BCFF /* test-macOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-macOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9EEC1A423F43D7200E31B19 /* wordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,10 +376,15 @@
 			isa = PBXGroup;
 			children = (
 				E91FEA1C212D5D1C006C60D5 /* AppDelegate.swift */,
+				E91854F62181F158006A82C9 /* pinyin_data.swift */,
 				E91FEA1E212D5D1D006C60D5 /* Assets.xcassets */,
 				E91FEA20212D5D1D006C60D5 /* MainMenu.xib */,
 				E91FEA23212D5D1D006C60D5 /* Info.plist */,
 				E91FEA24212D5D1D006C60D5 /* test_macOS.entitlements */,
+				E933AE0623F44AF3004183B8 /* longWordData.json */,
+				E933AE0423F43DFC004183B8 /* data.json */,
+				E9EEC1A423F43D7200E31B19 /* wordData.swift */,
+				E994FD16246A79B00062BCFF /* test-macOS-Bridging-Header.h */,
 			);
 			path = "test-macOS";
 			sourceTree = "<group>";
@@ -563,11 +577,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = R0uter;
 				TargetAttributes = {
 					E91FEA19212D5D1C006C60D5 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 					};
 					E97C79BC212EFEEE000B8F41 = {
@@ -610,7 +625,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E933AE0723F44AF3004183B8 /* longWordData.json in Resources */,
 				E91FEA1F212D5D1D006C60D5 /* Assets.xcassets in Resources */,
+				E933AE0523F43DFC004183B8 /* data.json in Resources */,
 				E91FEA22212D5D1D006C60D5 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +667,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91854F72181F158006A82C9 /* pinyin_data.swift in Sources */,
+				E9EEC1A523F43D7200E31B19 /* wordData.swift in Sources */,
 				E91FEA1D212D5D1C006C60D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -892,6 +911,7 @@
 					"-lsqlite3",
 				);
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				VALID_ARCHS = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -903,6 +923,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "test-macOS/test_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -912,8 +933,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.test-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "test-macOS/test-macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
@@ -922,6 +944,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "test-macOS/test_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -930,8 +953,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.test-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test-macOS/test-macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = x86_64;
 			};
 			name = Release;
@@ -984,8 +1008,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1009,8 +1032,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1036,7 +1058,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1051,6 +1073,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.SunPinyinLib-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = x86_64;
 			};
@@ -1076,6 +1099,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.logcg.SunPinyinLib-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = x86_64;
 			};
